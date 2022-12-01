@@ -21,6 +21,12 @@ def part1(data):
     return max(sums)
 
 
+def part2(data):
+    sums = [sum(elf) for elf in data]
+    top_three = sorted(sums, reverse=True)[:3]
+    return sum(top_three)
+
+
 # Part 1
 test_data = load_data('01/test_input.txt')
 print(test_data)
@@ -31,3 +37,7 @@ print(test_result)
 data = load_data('01/input.txt')
 result = part1(data)
 print(result)
+
+
+result2 = part2(data)
+print(result2)
